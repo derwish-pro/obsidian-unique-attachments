@@ -182,7 +182,7 @@ export default class ConsistentAttachmentsAndLinks extends Plugin {
 	}
 	
 	saveAttachmentNameInLink(mdc: CachedMetadata, mdfile: TFile, file: TAbstractFile, baseName: string, currentView: MarkdownView) {
-		let cmDoc = currentView.sourceMode.cmEditor;
+		let cmDoc = currentView.editor;
 		if (!mdc.links) {
 			return;
 		}
@@ -295,7 +295,3 @@ export default class ConsistentAttachmentsAndLinks extends Plugin {
 
 
 }
-
-
-
-
