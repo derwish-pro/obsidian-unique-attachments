@@ -272,7 +272,7 @@ export default class ConsistentAttachmentsAndLinks extends Plugin {
 	async generateValidBaseName(filePath: string) {
 		let file = this.lh.getFileByPath(filePath);
 		let data = await this.app.vault.readBinary(file);
-		const buf = Buffer.from(data);
+		const buf = new Uint8Array(data);
 
 		// var crypto = require('crypto');
 		// let hash: string = crypto.createHash('md5').update(buf).digest("hex");
